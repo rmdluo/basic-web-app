@@ -19,9 +19,12 @@ export default function QueryProcessor(query: string): string {
     );
   }
 
-  if (query.toLowerCase().includes("What is 25 plus 23?")) {
+  if (query.toLowerCase().includes("What is") &&  query.toLowerCase().includes("plus")) {
+    let num1 : number = Number(query.split(" ")[2]);
+    let num2 : number = Number(query.split(" ")[4]);
+    
     return (
-      "48"
+      (num1 + num2).toString();
     );
   }
 
