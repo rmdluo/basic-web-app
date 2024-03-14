@@ -24,7 +24,7 @@ export default function QueryProcessor(query: string): string {
     let num2 : number = Number(query.split(" ")[4]);
     
     return (
-      (num1 + num2).toString();
+      (num1 + num2).toString()
     );
   }
 
