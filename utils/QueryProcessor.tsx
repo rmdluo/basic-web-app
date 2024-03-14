@@ -19,7 +19,7 @@ export default function QueryProcessor(query: string): string {
     );
   }
 
-  if (query.toLowerCase().includes("What is") &&  query.toLowerCase().includes("plus")) {
+  if (query.toLowerCase().includes("what is") &&  query.toLowerCase().includes("plus")) {
     let num1 : number = Number(query.split(" ")[2]);
     let num2 : number = Number(query.split(" ")[4].slice(0, -1));
     
