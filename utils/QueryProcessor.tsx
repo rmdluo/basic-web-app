@@ -39,6 +39,16 @@ export default function QueryProcessor(query: string): string {
     );
   }
 
+  if (query.toLowerCase().includes("what is") && query.toLowerCase().includes("to the power of") && query.split(" ").length >= 8) {
+    let num1 : number = Number(query.split(" ")[2]);
+    let str2 : string = query.split(" ")[7];
+    let num2 : number = Number(str2.slice(0, -1));
+    
+    return (
+      (Math.pow(num1, num2)).toString()
+    );
+  }
+
   if (query.toLowerCase().includes("which of the following numbers is the largest:") && query.split(" ").length >= 11) {
     let num1 : number = Number(query.split(" ")[8].slice(0, -1));
     let num2 : number = Number(query.split(" ")[9].slice(0, -1));
